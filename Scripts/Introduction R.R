@@ -34,3 +34,10 @@ respondent_wall_type[c(3,2)]
 
 no_members[no_members <3| no_members > 5]
 posessions[posessions == "car" | posessions == "bicycle"] 
+
+
+rooms <- c(2,1,1,NA, 4)
+mean(rooms)
+
+mean(rooms,na.rm = TRUE)
+is.na(rooms)
