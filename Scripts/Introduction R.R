@@ -29,3 +29,8 @@ posessions <- c(posessions, "mobile_phone") #add another element to vector
 
 
 num_char <- c(1,2,3, "a")
+respondent_wall_type[2]
+respondent_wall_type[c(3,2)]
+
+no_members[no_members <3| no_members > 5]
+posessions[posessions == "car" | posessions == "bicycle"] 
