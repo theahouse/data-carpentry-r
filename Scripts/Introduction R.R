@@ -10,3 +10,8 @@ area_acres #print
 # 
 3+5
 12/7
+#b <- sqrt(a)
+round(3.14159)
+round(3.14159, digits = 2)
+8-4
+??logarithm
