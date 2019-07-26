@@ -36,3 +36,42 @@ interviews_mls_per_house <- interviews %>%
   filter(total_meals > 20) %>%
   select(village, total_meals)
 
+
+
+interviews %>%
+  group_by(village) %>%
+  summarize(mean_no_membrs = mean(no_membrs))
+
+interviews %>%
+  filter(!is.na(memb_assoc)) %>%
+  group_by(village, memb_assoc) %>%
+  summarize(mean_no_membrs = mean(no_membrs),
+            min_membrs = min(no_membrs)) %>%
+arrange(desc(min_membrs))
+
+
+interviews %>% count(village, sort = TRUE)
+
+#Excercise
+
+interviews %>%
+  group_by(village) %>%
+  summarize(
+    mean_no_membrs = mean(no_membrs),
+    min_no_membrs = min(no_membrs),
+    max_no_membrs = max(no_membrs),
+    n = n()
+  )
+
+  
+
+
+
+
+
+
+
+
+
+
+
