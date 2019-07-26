@@ -48,3 +48,24 @@ tail(interviews)
 interviews[nrow(interviews),]
 interviews_last <- interviews[nrow(interviews),]
 tail(interviews, n = 1)
+#Factors
+floor_type <- factor(c("earth", "cement", "cement", "earth"))
+levels(floor_type)
+nlevels(floor_type)
+floor_type <- factor(c("earth", "cement", "cement", "earth"), levels=c("earth",  "cement"))
+levels(floor_type)
+floor_type
+
+
+levels(floor_type)[2] <-"brick"
+levels(floor_type)
+floor_type
+
+as.character(floor_type)
+
+
+year_fct <- factor(c(1990, 1983, 1977, 1998, 1990))
+as.numeric(year_fct)
+
+as.character(year_fct)
+as.numeric(as.character(year_fct))
