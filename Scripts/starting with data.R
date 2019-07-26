@@ -89,3 +89,4 @@ levels(affect_conflicts)[2] <- "more than once"
 affect_conflicts <- factor(affect_conflicts, levels = c("never", "once", "more than once", "frequently", "undetermined"))
 plot(affect_conflicts)
 
+#
