@@ -69,3 +69,23 @@ as.numeric(year_fct)
 
 as.character(year_fct)
 as.numeric(as.character(year_fct))
+
+
+#Figures
+
+affect_conflicts <- interviews$affect_conflicts
+affect_conflicts <- as.factor(affect_conflicts)
+
+
+plot(affect_conflicts)
+
+
+affect_conflicts <- interviews$affect_conflicts
+affect_conflicts[is.na(affect_conflicts)] <- "undetermined"
+affect_conflicts <- as.factor(affect_conflicts)
+plot(affect_conflicts)
+
+levels(affect_conflicts)[2] <- "more than once"
+affect_conflicts <- factor(affect_conflicts, levels = c("never", "once", "more than once", "frequently", "undetermined"))
+plot(affect_conflicts)
+
