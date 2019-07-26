@@ -18,3 +18,21 @@ interviews %>%
 interviews %>%
   filter(memb_assoc == "yes") %>%
   select(affect_conflicts, liv_count, no_meals)
+
+#mutate
+
+interviews_ppl_room <- interviews %>% 
+  mutate(people_per_room = no_membrs / rooms)
+view(interviews_ppl_room)
+
+interviews_ppl_room <- interviews %>% 
+  filter(memb_assoc == "yes") %>%
+  mutate(people_per_room = no_membrs / rooms)
+view(interviews_ppl_room)
+
+#Excercise
+interviews_mls_per_house <- interviews %>%
+  mutate(total_meals = no_membrs * no_meals) %>%
+  filter(total_meals > 20) %>%
+  select(village, total_meals)
+
