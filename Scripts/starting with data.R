@@ -18,6 +18,7 @@ tail(as.data.frame(interviews))
 
 names(interviews)     
 str(interviews)
+interviews[100,]
 
 summary(interviews)
 
@@ -38,4 +39,12 @@ interviews
 
 interviews_no_id
 
-interviews
+#Excercise! I did this myself!!
+
+interviews_100 <- interviews [100,]
+nrow(interviews)
+interviews[131,]
+tail(interviews)
+interviews[nrow(interviews),]
+interviews_last <- interviews[nrow(interviews),]
+tail(interviews, n = 1)
